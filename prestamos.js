@@ -1,7 +1,7 @@
 
 
 
-function calcular_prestamo(monto , cuotas ){
+function calcular_prestamo( monto , cuotas ){
 
     monto = parseFloat(monto);
     cuotas = parseInt(cuotas);
@@ -20,12 +20,11 @@ function calcular_prestamo(monto , cuotas ){
         return prestamo
     }
     else if( cuotas == 12 && monto > 0){
-        prestamo = monto + (monto * 1)
+        prestamo = monto + (monto * 1);
         return prestamo
     }
 
-
-
+}
 
 // Prestamos //
 
@@ -36,5 +35,15 @@ let monto = 0;
 while( monto != "FIN") {
 
     monto = prompt("Ingrese el monto deseado o FIN");
-    let cuotas = prompt("Ingrese la cantidad de cuotas: 1, 3, 6 y 12");
+    if(monto != "FIN"){
+        let cuotas = prompt("Ingrese la cantidad de cuotas: 1, 3, 6 y 12");
+        let resultado_del_prestamo = calcular_prestamo( monto , cuotas);
+        console.log("Pediste:", monto);
+        console.log("Cuotas:", cuotas);
+        console.log("Devolves:", resultado_del_prestamo);
+    }
+    else{
+        console.log("Gracias")
+    }
+    
 }
