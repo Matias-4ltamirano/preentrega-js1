@@ -9,9 +9,21 @@ function calcular_prestamo(monto , cuotas ){
     let prestamo = 0;
 
     if(cuotas == 1 && monto > 0){
-
+        return monto
     }
-}
+    else if( cuotas == 3 && monto > 0){
+        prestamo = monto + (monto * 0.30);
+        return prestamo
+    }
+    else if( cuotas == 6 && monto > 0){
+        prestamo = monto + (monto *0.60);
+        return prestamo
+    }
+    else if( cuotas == 12 && monto > 0){
+        prestamo = monto + (monto * 1)
+        return prestamo
+    }
+
 
 
 
